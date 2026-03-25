@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Ultra-Premium Light Purple Palette */
+  --bg-color: #f3e8ff; /* very obvious light purple background */
+  --bg-gradient: linear-gradient(135deg, #fcfbfe 0%, #f3e8ff 100%);
+  --surface-color: #ffffff;
+  --text-primary: #1e1b4b; /* deep indigo */
+  --text-secondary: #4f46e5;
+  
+  --primary-color: #7c3aed; /* Vibrant rich violet */
+  --primary-hover: #6d28d9; 
+  --primary-light: #f3e8ff; 
+  
+  --border-color: #e2e8f0;
+  
+  /* Status Colors (Refined) */
+  --status-applied: #2563eb; 
+  --status-applied-bg: #eff6ff;
+  --status-interviewing: #d97706; 
+  --status-interviewing-bg: #fffbeb;
+  --status-offer: #059669; 
+  --status-offer-bg: #ecfdf5;
+  --status-rejected: #dc2626; 
+  --status-rejected-bg: #fef2f2;
+
+  --shadow-sm: 0 1px 3px 0 rgb(124 58 237 / 0.05), 0 1px 2px -1px rgb(124 58 237 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(124 58 237 / 0.08), 0 2px 4px -2px rgb(124 58 237 / 0.04);
+  --shadow-lg: 0 10px 15px -3px rgb(124 58 237 / 0.08), 0 4px 6px -4px rgb(124 58 237 / 0.04);
+  
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+[data-theme='dark'] {
+  /* Premium Dark Mode */
+  --bg-color: #0b0914; 
+  --bg-gradient: linear-gradient(135deg, #0b0914 0%, #1e1b4b 100%);
+  --surface-color: #1a1625;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  
+  --primary-color: #a78bfa; 
+  --primary-hover: #c4b5fd; 
+  --primary-light: #2e1065; 
+  
+  --border-color: #1e1b2e;
+
+  --status-applied: #60a5fa;
+  --status-applied-bg: #1e3a8a;
+  --status-interviewing: #fbbf24;
+  --status-interviewing-bg: #78350f;
+  --status-offer: #34d399;
+  --status-offer-bg: #064e3b;
+  --status-rejected: #f87171;
+  --status-rejected-bg: #7f1d1d;
+  
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.6);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition-speed) ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2.5rem 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+}

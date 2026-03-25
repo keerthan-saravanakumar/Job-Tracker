@@ -1,0 +1,24 @@
+.chart-container {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+}
+.chart-container h3 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  align-self: flex-start;
+}
+.no-data {
+  color: var(--text-secondary);
+  padding: 2rem;
+  text-align: center;
+  margin: auto;
+}
