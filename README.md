@@ -45,12 +45,7 @@ A modern, production-ready full-stack job tracking application built with React,
 - Tailwind CSS
 - React Icons
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- CORS
-- Environment variables support
+
 
 ## 📁 Project Structure
 
